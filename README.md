@@ -1,6 +1,6 @@
 # Stereo Installer
 
-A one-click fix for Discord voice module issues. Automatically downloads and applies the latest voice module patches to restore stereo audio functionality.
+A one-click install tool for Discord Stereo Modules. Automatically downloads and applies the latest voice module patches to restore lossless stereo audio functionality.
 
 ## Quick Install
 
