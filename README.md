@@ -11,7 +11,7 @@ powershell -ExecutionPolicy Bypass -c "irm https://raw.githubusercontent.com/Pro
 ```
 
 ### Option 2: Download Batch File
-1. Download [StereoFix.bat](https://github.com/ProdHallow/installer/raw/main/StereoFix.bat)
+1. Download [Stereo Installer.bat](https://github.com/ProdHallow/installer/raw/main/Stereo_Installer.bat)
 2. Double-click to run
 
 ## Supported Clients
