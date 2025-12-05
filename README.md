@@ -1,4 +1,4 @@
-# Discord Stereo Installer
+# Stereo Installer
 
 A one-click fix for Discord voice module issues. Automatically downloads and applies the latest voice module patches to restore stereo audio functionality.
 
@@ -32,6 +32,20 @@ powershell -ExecutionPolicy Bypass -c "irm https://raw.githubusercontent.com/Pro
 - Downloads fresh voice module files each run
 - Creates optional startup shortcut to auto-fix on boot
 - Auto-launches Discord after patching
+
+## Known Bugs
+
+> **ffmpeg.dll Limitations**
+> 
+> The current ffmpeg.dll has some known issues:
+> - Notifications do not play
+> - Soundboards do not work
+> - GIFs may not play properly
+> - Most MP3 and MP4 files will not play
+> 
+> **Upside:** The camera crashing issue is fixed with this version.
+> 
+> We are actively working on finding a better ffmpeg.dll to resolve these issues.
 
 ## Source Code
 
