@@ -51,7 +51,7 @@ powershell -ExecutionPolicy Bypass -c "irm https://raw.githubusercontent.com/Pro
 
 | Repository | Description |
 |------------|-------------|
-| [ProdHallow/installer](https://github.com/ProdHallow/installer) | Installer script and batch file |
+| [ProdHallow/installer](https://github.com/ProdHallow/installer) | Installer script |
 | [ProdHallow/voice-backup](https://github.com/ProdHallow/voice-backup) | Voice module backup files and ffmpeg.dll |
 
 ## Credits
