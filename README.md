@@ -26,7 +26,7 @@ powershell -ExecutionPolicy Bypass -c "irm https://raw.githubusercontent.com/Pro
 | Vencord | Mod |
 | Equicord | Mod |
 
-## Features
+## Features !!!Update!!! v2.0
 
 - **Automatic updates** — always runs the latest version
 - **Fix All Clients** — scan and patch all installed Discord clients at once
