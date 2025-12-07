@@ -92,7 +92,7 @@ powershell -ExecutionPolicy Bypass -c "irm https://raw.githubusercontent.com/Pro
 
 ## 👥 Credits
 
-Made by **Oracle** | **Shaun** | **Terrain** | **Hallow** | **Ascend**
+Made by **Oracle** | **Shaun** | **Terrain** | **Hallow** | **Ascend** | **Sentry**
 
 ---
 
