@@ -28,10 +28,25 @@ powershell -ExecutionPolicy Bypass -c "irm https://raw.githubusercontent.com/Pro
 
 ## Features
 
-- Automatic updates — always runs the latest version
-- Downloads fresh voice module files each run
-- Creates optional startup shortcut to auto-fix on boot
-- Auto-launches Discord after patching
+- **Automatic updates** — always runs the latest version
+- **Fix All Clients** — scan and patch all installed Discord clients at once
+- **Backup & Rollback** — automatically backs up voice modules before patching; restore anytime
+- **Discord update detection** — alerts you when Discord updates and the fix needs to be reapplied
+- **Quick backup access** — open your backup folder directly from the app
+- **Discord running warning** — warns you if Discord is running and will be closed
+- **Completion sound** — audio notification when fix completes
+- **Startup shortcut** — optional auto-fix on Windows boot
+- **Auto-launches Discord** after patching
+
+## Buttons
+
+| Button | Description |
+|--------|-------------|
+| Start Fix | Apply fix to the selected Discord client |
+| Fix All | Scan and fix all installed Discord clients at once |
+| Rollback | Restore voice module from a previous backup |
+| Backups | Open the backup folder in Explorer |
+| Check | Check if Discord has updated since last fix |
 
 ## Known Bugs
 
