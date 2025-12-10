@@ -106,32 +106,6 @@ powershell -ExecutionPolicy Bypass -c "irm https://raw.githubusercontent.com/Pro
 
 ---
 
-## 🖥️ Command Line Usage
-
-```
-Discord Voice Fixer
-
-Usage: .\DiscordVoiceFixer.ps1 [options]
-
-Options:
-  -Silent       Run without GUI, automatically fix all detected clients
-  -CheckOnly    Only check if Discord has updated, don't apply fixes
-  -FixClient    Fix a specific client by name
-  -Help         Show help message
-
-Examples:
-  .\DiscordVoiceFixer.ps1                              # Normal GUI mode
-  .\DiscordVoiceFixer.ps1 -Silent                      # Silent auto-fix all
-  .\DiscordVoiceFixer.ps1 -CheckOnly                   # Check for Discord updates
-  .\DiscordVoiceFixer.ps1 -FixClient "Discord - PTB"   # Fix specific client
-```
-
-**Exit Codes (for scripting):**
-- `0` - Success / No updates needed
-- `1` - Error / Updates needed (when using `-CheckOnly`)
-
----
-
 ## 📂 File Locations
 
 | Path | Description |
