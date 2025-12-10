@@ -2,6 +2,10 @@
 
 A one-click install tool for Discord Stereo Modules. Automatically downloads and applies the latest voice module patches to restore lossless stereo audio functionality.
 
+![Version](https://img.shields.io/badge/Version-3.0-5865F2?style=flat-square)
+![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?style=flat-square)
+![PowerShell](https://img.shields.io/badge/PowerShell-5.1+-5391FE?style=flat-square)
+
 ---
 
 ## 🚀 Quick Install
@@ -18,6 +22,21 @@ powershell -ExecutionPolicy Bypass -c "irm https://raw.githubusercontent.com/Pro
 ### Option 2: Download Batch File
 1. Download [Stereo Installer.bat](https://github.com/ProdHallow/Discord-Stereo-Installer/releases/latest)
 2. Double-click to run
+
+### Option 3: Command Line (Advanced)
+```powershell
+# Silent mode - auto-fix all clients without GUI
+.\DiscordVoiceFixer.ps1 -Silent
+
+# Check if Discord has updated (useful for scripts)
+.\DiscordVoiceFixer.ps1 -CheckOnly
+
+# Fix a specific client
+.\DiscordVoiceFixer.ps1 -FixClient "Discord - Stable"
+
+# Show help
+.\DiscordVoiceFixer.ps1 -Help
+```
 
 ---
 
@@ -49,6 +68,17 @@ powershell -ExecutionPolicy Bypass -c "irm https://raw.githubusercontent.com/Pro
 | 🚀 **Startup Shortcut** | Optional auto-fix on Windows boot |
 | ▶️ **Auto-Launch** | Starts Discord after patching |
 
+### 🆕 New in v3.0
+
+| Feature | Description |
+|---------|-------------|
+| 💾 **Settings Persistence** | Your preferences are saved and restored between sessions |
+| 📝 **Save Script** | Save the script locally for startup shortcuts to work properly |
+| 🤫 **Silent Mode** | Run without GUI using `-Silent` flag - perfect for automation |
+| 🔇 **Silent Startup** | Option to skip GUI when running from Windows startup |
+| 🖥️ **Command Line Args** | Full CLI support: `-Silent`, `-CheckOnly`, `-FixClient`, `-Help` |
+| 🔄 **Live Discord Check** | Automatically updates Discord running status every 5 seconds |
+
 ---
 
 ## 🎛️ Buttons
@@ -60,6 +90,56 @@ powershell -ExecutionPolicy Bypass -c "irm https://raw.githubusercontent.com/Pro
 | **Rollback** | ![Gray](https://img.shields.io/badge/Gray-464950?style=flat-square) | Restore voice module from a previous backup |
 | **Backups** | ![Gray](https://img.shields.io/badge/Gray-464950?style=flat-square) | Open the backup folder in Explorer |
 | **Check** | ![Orange](https://img.shields.io/badge/Orange-faa81a?style=flat-square) | Check if Discord has updated since last fix |
+| **Save Script** | ![Gray](https://img.shields.io/badge/Gray-464950?style=flat-square) | Save script to AppData (required for startup shortcut) |
+
+---
+
+## ⚙️ Options
+
+| Option | Description |
+|--------|-------------|
+| **Check for script updates** | Checks GitHub for newer versions before applying fix |
+| **Auto-apply updates** | Automatically downloads and applies script updates |
+| **Create startup shortcut** | Creates a shortcut in Windows Startup folder |
+| **Run silently on startup** | Skips GUI and auto-fixes all clients when run from startup |
+| **Auto-start Discord** | Launches Discord after the fix is applied |
+
+---
+
+## 🖥️ Command Line Usage
+
+```
+Discord Voice Fixer
+
+Usage: .\DiscordVoiceFixer.ps1 [options]
+
+Options:
+  -Silent       Run without GUI, automatically fix all detected clients
+  -CheckOnly    Only check if Discord has updated, don't apply fixes
+  -FixClient    Fix a specific client by name
+  -Help         Show help message
+
+Examples:
+  .\DiscordVoiceFixer.ps1                              # Normal GUI mode
+  .\DiscordVoiceFixer.ps1 -Silent                      # Silent auto-fix all
+  .\DiscordVoiceFixer.ps1 -CheckOnly                   # Check for Discord updates
+  .\DiscordVoiceFixer.ps1 -FixClient "Discord - PTB"   # Fix specific client
+```
+
+**Exit Codes (for scripting):**
+- `0` - Success / No updates needed
+- `1` - Error / Updates needed (when using `-CheckOnly`)
+
+---
+
+## 📂 File Locations
+
+| Path | Description |
+|------|-------------|
+| `%APPDATA%\StereoInstaller\settings.json` | Your saved preferences |
+| `%APPDATA%\StereoInstaller\state.json` | Discord version tracking |
+| `%APPDATA%\StereoInstaller\backups\` | Voice module backups |
+| `%APPDATA%\StereoInstaller\DiscordVoiceFixer.ps1` | Saved script (for shortcuts) |
 
 ---
 
@@ -87,6 +167,33 @@ powershell -ExecutionPolicy Bypass -c "irm https://raw.githubusercontent.com/Pro
 |------------|-------------|
 | [ProdHallow/installer](https://github.com/ProdHallow/installer) | Installer script |
 | [ProdHallow/voice-backup](https://github.com/ProdHallow/voice-backup) | Voice module backup files and ffmpeg.dll |
+
+---
+
+## 📋 Changelog
+
+### v3.0
+- ✨ Added settings persistence between sessions
+- ✨ Added "Save Script" button for proper startup shortcut support
+- ✨ Added silent mode (`-Silent` flag) for headless operation
+- ✨ Added `-CheckOnly` flag for scripting/automation
+- ✨ Added `-FixClient` flag to fix specific clients
+- ✨ Added "Run silently on startup" option
+- ✨ Added live Discord process monitoring
+- 🐛 Fixed startup shortcut not working when run from web
+- 🐛 Fixed GUI element overlapping issues
+- 🔧 Improved settings management and persistence
+
+### v2.0
+- Added Fix All Clients feature
+- Added backup and rollback functionality
+- Added Discord update detection
+- Added startup shortcut option
+- Added completion sounds
+
+### v1.0
+- Initial release
+- Basic voice module patching
 
 ---
 
