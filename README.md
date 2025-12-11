@@ -49,8 +49,9 @@ powershell -ExecutionPolicy Bypass -c "irm https://raw.githubusercontent.com/Pro
 | Discord Canary | ![Official](https://img.shields.io/badge/Official-5865F2?style=flat-square) |
 | Discord Development | ![Official](https://img.shields.io/badge/Official-5865F2?style=flat-square) |
 | BetterDiscord | ![Mod](https://img.shields.io/badge/Mod-57a657?style=flat-square) |
-| Vencord | ![Mod](https://img.shields.io/badge/Mod-57a657?style=flat-square) |
+| BetterVencord | ![Mod](https://img.shields.io/badge/Mod-57a657?style=flat-square) |
 | Equicord | ![Mod](https://img.shields.io/badge/Mod-57a657?style=flat-square) |
+| Vencord | ![Mod](https://img.shields.io/badge/Mod-57a657?style=flat-square) |
 
 ---
 
