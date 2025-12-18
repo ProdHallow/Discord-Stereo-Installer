@@ -20,8 +20,8 @@ powershell -ExecutionPolicy Bypass -c "irm https://raw.githubusercontent.com/Pro
 ```
 
 ### Option 2: Download Batch File
-1. Download [Stereo Installer.bat](https://github.com/ProdHallow/Discord-Stereo-Installer/releases/latest)
-2. Double-click to run
+1. Download [Stereo Installer.bat](https://github.com/ProdHallow/installer/releases/latest)
+2. Double-click to run.
 
 ### Option 3: Command Line (Advanced)
 ```powershell
@@ -59,26 +59,25 @@ powershell -ExecutionPolicy Bypass -c "irm https://raw.githubusercontent.com/Pro
 
 | Feature | Description |
 |---------|-------------|
-| 📂 **Any Drive Support** | Finds Discord on C:, D:, E:, etc. automatically |
-| 🔄 **Automatic Updates** | Always runs the latest version |
-| 🎯 **Fix All Clients** | Scan and patch all installed Discord clients at once |
-| 💾 **Backup & Rollback** | Automatically backs up voice modules before patching; restore anytime |
-| 🔔 **Update Detection** | Alerts you when Discord updates and the fix needs to be reapplied |
-| 📁 **Quick Backup Access** | Open your backup folder directly from the app |
-| ⚠️ **Running Warning** | Warns you if Discord is running and will be closed |
-| 🛡️ **Safe Detection** | Uses Start Menu shortcuts instead of Registry (No AV flags) |
-| ▶️ **Auto-Launch** | Starts Discord after patching |
+| 📂 **Any Drive Support** | Finds Discord on C:, D:, E:, etc. automatically via Process detection |
+| 🛡️ **No Admin Needed** | Runs safely in user space (AppData/Temp) |
+| 🚀 **High Speed** | Optimized download logic for instant file fetching |
+| 👁️ **High DPI Ready** | GUI scales correctly on 4K/1440p monitors |
+| 💾 **Safe Backups** | Automatically backs up your current voice module before patching |
+| 🔄 **Auto-Updates** | Detects when Discord updates and alerts you to re-apply the fix |
+| 🎯 **Fix All** | Scan and patch every installed Discord client in one click |
+| ▶️ **Auto-Launch** | Starts Discord immediately after patching |
 
 ### 🆕 New in v3.1
 
 | Feature | Description |
 |---------|-------------|
-| 🕵️ **Smart Path Finding** | Logic updated to check Running Processes first, then Start Menu shortcuts |
-| 💾 **Settings Persistence** | Your preferences are saved and restored between sessions |
+| ⚡ **Performance Boost** | Fixed slow download speeds on Windows 10/11 PowerShell |
+| 🕵️ **Smart Path Finding** | Logic updated to check Running Processes first, then Shortcuts, then Default paths |
+| 🐛 **Backup Logic Fix** | Fixed a bug where restoring backups would create nested folders, breaking Discord |
 | 🎨 **Adaptive UI** | Options now auto-hide when not relevant to reduce clutter |
-| 📝 **Save Script** | Save the script locally for startup shortcuts to work properly |
-| 🤫 **Silent Mode** | Run without GUI using `-Silent` flag - perfect for automation |
-| 🔄 **Live Discord Check** | Automatically updates Discord running status every 5 seconds |
+| 💾 **Settings Persistence** | Your preferences are saved and restored between sessions |
+| 🌐 **API Resilience** | Added protections against GitHub API rate limits |
 
 ---
 
@@ -91,7 +90,7 @@ powershell -ExecutionPolicy Bypass -c "irm https://raw.githubusercontent.com/Pro
 | **Rollback** | ![Gray](https://img.shields.io/badge/Gray-464950?style=flat-square) | Restore voice module from a previous backup |
 | **Backups** | ![Gray](https://img.shields.io/badge/Gray-464950?style=flat-square) | Open the backup folder in Explorer |
 | **Check** | ![Orange](https://img.shields.io/badge/Orange-faa81a?style=flat-square) | Check if Discord has updated since last fix |
-| **Save Script** | ![Gray](https://img.shields.io/badge/Gray-464950?style=flat-square) | Save script to AppData (required for startup shortcut) |
+| **Save Script** | ![Gray](https://img.shields.io/badge/Gray-464950?style=flat-square) | Save script locally (required for startup shortcuts) |
 
 ---
 
@@ -123,16 +122,15 @@ powershell -ExecutionPolicy Bypass -c "irm https://raw.githubusercontent.com/Pro
 > [!WARNING]
 > **ffmpeg.dll Limitations**
 > 
-> The current ffmpeg.dll has some known issues:
-> - ❌ Notifications do not play
-> - ❌ Soundboards do not work
-> - ❌ GIFs may not play properly
-> - ❌ Most MP3 and MP4 files will not play
-
-> [!NOTE]
+> The current stereo-enabled `ffmpeg.dll` has some known side effects:
+> - ❌ Notifications sounds do not play
+> - ❌ Soundboard sounds do not play
+> - ❌ Some GIFs may not play properly
+> - ❌ Most MP3 and MP4 files previewed in Discord will not play audio
+>
 > **Upside:** ✅ The camera crashing issue is fixed with this version.
 > 
-> We are actively working on finding a better ffmpeg.dll to resolve these issues.
+> *We are actively working on finding a better ffmpeg.dll to resolve these issues.*
 
 ---
 
@@ -148,25 +146,23 @@ powershell -ExecutionPolicy Bypass -c "irm https://raw.githubusercontent.com/Pro
 ## 📋 Changelog
 
 ### v3.1
-- ✨ **Custom Drive Support:** Now detects Discord installed on any drive (D:, E:, etc.)
-- 🧠 **Smart Logic:** Improved install path detection (checks Process -> Shortcut -> Default)
-- 🎨 **UI Polish:** Sub-options now auto-hide when not relevant
-- 🐛 **Bug Fix:** Fixed logic timing where killing Discord first prevented path detection
+- ✨ **Custom Drive Support:** Now detects Discord installed on any drive (D:, E:, etc.) via process detection.
+- ⚡ **Speed:** Disabled progress bars on downloads to fix slow transfer speeds.
+- 🐛 **Critical Fix:** Fixed directory structure bug in backups/restores.
+- 👁️ **Visuals:** Added High DPI support for sharp text on modern screens.
+- 🛡️ **Safety:** Added checks to ensure downloads succeed before deleting old files.
 
 ### v3.0
-- ✨ Added settings persistence between sessions
-- ✨ Added "Save Script" button
-- ✨ Added full CLI support (`-Silent`, `-CheckOnly`, etc.)
-- ✨ Added live Discord process monitoring
-- 🐛 Fixed startup shortcut issues
+- ✨ Added settings persistence between sessions.
+- ✨ Added "Save Script" button.
+- ✨ Added full CLI support (`-Silent`, `-CheckOnly`, etc.).
+- ✨ Added live Discord process monitoring.
+- 🐛 Fixed startup shortcut issues.
 
 ### v2.0
-- Added Fix All Clients feature
-- Added backup and rollback functionality
-- Added Discord update detection
-
-### v1.0
-- Initial release
+- Added Fix All Clients feature.
+- Added backup and rollback functionality.
+- Added Discord update detection.
 
 ---
 
