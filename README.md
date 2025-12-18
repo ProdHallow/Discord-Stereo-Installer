@@ -20,7 +20,7 @@ powershell -ExecutionPolicy Bypass -c "irm https://raw.githubusercontent.com/Pro
 ```
 
 ### Option 2: Download Batch File
-1. Download [Stereo Installer.bat](https://github.com/ProdHallow/installer/releases/latest)
+1. Download [Stereo Installer.bat](https://github.com/ProdHallow/Discord-Stereo-Installer/releases/latest)
 2. Double-click to run.
 
 ### Option 3: Command Line (Advanced)
