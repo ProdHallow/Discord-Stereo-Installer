@@ -1,5 +1,3 @@
-Here is the updated README. I bumped the version to **v3.1** to reflect the major logic improvements regarding non-C: drive support and the UI polish.
-
 # 🎧 Stereo Installer
 
 A one-click install tool for Discord Stereo Modules. Automatically downloads and applies the latest voice module patches to restore lossless stereo audio functionality.
