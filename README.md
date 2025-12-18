@@ -2,7 +2,7 @@
 
 A one-click install tool for Discord Stereo Modules. Automatically downloads and applies the latest voice module patches to restore lossless stereo audio functionality.
 
-![Version](https://img.shields.io/badge/Version-3.1-5865F2?style=flat-square)
+![Version](https://img.shields.io/badge/Version-3.2-5865F2?style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?style=flat-square)
 ![PowerShell](https://img.shields.io/badge/PowerShell-5.1+-5391FE?style=flat-square)
 
@@ -48,6 +48,7 @@ powershell -ExecutionPolicy Bypass -c "irm https://raw.githubusercontent.com/Pro
 | Discord PTB | ![Official](https://img.shields.io/badge/Official-5865F2?style=flat-square) |
 | Discord Canary | ![Official](https://img.shields.io/badge/Official-5865F2?style=flat-square) |
 | Discord Development | ![Official](https://img.shields.io/badge/Official-5865F2?style=flat-square) |
+| Lightcord | ![Mod](https://img.shields.io/badge/Mod-57a657?style=flat-square) |
 | BetterDiscord | ![Mod](https://img.shields.io/badge/Mod-57a657?style=flat-square) |
 | BetterVencord | ![Mod](https://img.shields.io/badge/Mod-57a657?style=flat-square) |
 | Equicord | ![Mod](https://img.shields.io/badge/Mod-57a657?style=flat-square) |
@@ -66,18 +67,20 @@ powershell -ExecutionPolicy Bypass -c "irm https://raw.githubusercontent.com/Pro
 | 💾 **Safe Backups** | Automatically backs up your current voice module before patching |
 | 🔄 **Auto-Updates** | Detects when Discord updates and alerts you to re-apply the fix |
 | 🎯 **Fix All** | Scan and patch every installed Discord client in one click |
+| 🧠 **Smart De-duplication** | Correctly identifies Vencord/BetterDiscord as "Stable" to avoid double-patching |
 | ▶️ **Auto-Launch** | Starts Discord immediately after patching |
 
-### 🆕 New in v3.1
+### 🆕 New in v3.2
 
 | Feature | Description |
 |---------|-------------|
+| 🤫 **Silent Launch** | Fixed console log spam when Discord auto-starts |
+| 🧠 **De-duplication** | "Fix All" no longer tries to fix the same folder twice (e.g., Vencord & Stable) |
+| 🕯️ **Lightcord** | Added support for Lightcord detection and patching |
 | ⚡ **Performance Boost** | Fixed slow download speeds on Windows 10/11 PowerShell |
 | 🕵️ **Smart Path Finding** | Logic updated to check Running Processes first, then Shortcuts, then Default paths |
 | 🐛 **Backup Logic Fix** | Fixed a bug where restoring backups would create nested folders, breaking Discord |
 | 🎨 **Adaptive UI** | Options now auto-hide when not relevant to reduce clutter |
-| 💾 **Settings Persistence** | Your preferences are saved and restored between sessions |
-| 🌐 **API Resilience** | Added protections against GitHub API rate limits |
 
 ---
 
@@ -145,12 +148,17 @@ powershell -ExecutionPolicy Bypass -c "irm https://raw.githubusercontent.com/Pro
 
 ## 📋 Changelog
 
+### v3.2
+- ✨ **Lightcord Support:** Added detection and patching for Lightcord.
+- 🧠 **De-duplication:** "Fix All" now intelligently skips duplicate folders (e.g. if Vencord shares the Stable folder).
+- 🤫 **Silent Launch:** Discord no longer spams the console with Electron logs when starting.
+- 🐛 **Bug Fixes:** Resolved minor path detection issues.
+
 ### v3.1
 - ✨ **Custom Drive Support:** Now detects Discord installed on any drive (D:, E:, etc.) via process detection.
 - ⚡ **Speed:** Disabled progress bars on downloads to fix slow transfer speeds.
 - 🐛 **Critical Fix:** Fixed directory structure bug in backups/restores.
 - 👁️ **Visuals:** Added High DPI support for sharp text on modern screens.
-- 🛡️ **Safety:** Added checks to ensure downloads succeed before deleting old files.
 
 ### v3.0
 - ✨ Added settings persistence between sessions.
