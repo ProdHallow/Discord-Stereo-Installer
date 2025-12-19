@@ -149,6 +149,7 @@ powershell -ExecutionPolicy Bypass -c "irm https://raw.githubusercontent.com/Pro
 ## 📋 Changelog
 
 ### v3.2
+- 🐛 **Critical Fix:** Fixed a syntax error in the Backup Manager that prevented rollbacks.
 - ✨ **Lightcord Support:** Added detection and patching for Lightcord.
 - 🧠 **De-duplication:** "Fix All" now intelligently skips duplicate folders (e.g. if Vencord shares the Stable folder).
 - 🤫 **Silent Launch:** Discord no longer spams the console with Electron logs when starting.
