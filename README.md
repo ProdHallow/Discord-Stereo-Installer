@@ -15,7 +15,7 @@
 
 | Before | After |
 |:------:|:-----:|
-| [![Before](https://i.ibb.co/XfdWfv42/before.png)](https://ibb.co/XfdWfv42) | [![After](https://i.ibb.co/jkBmKhrr/after.png)](https://ibb.co/jkBmKhrr) |
+| [![Before](https://i.ibb.co/j9x89156/before.png)](https://ibb.co/XfdWfv42) | [![After](https://i.ibb.co/WvqZ9n22/after.png)](https://ibb.co/jkBmKhrr) |
 | *Original Discord Audio* | *99.9% Filterless Audio* |
 
 ---
@@ -74,26 +74,32 @@ Download [Stereo Installer.bat](https://github.com/ProdHallow/Discord-Stereo-Ins
 <details>
 <summary><h2>🎛️ Buttons & Options</h2></summary>
 
+<p align="center">
+  <a href="https://ibb.co/NgSvzK6G">
+    <img src="https://i.ibb.co/TDLf5tBN/GUI.png" alt="Stereo Installer GUI">
+  </a>
+</p>
+
 ### Buttons
 
-| Button | Description |
-|--------|-------------|
-| 🔵 **Start Fix** | Apply fix to selected Discord client |
-| 🟢 **Fix All** | Scan and fix all installed clients |
-| ⚪ **Rollback** | Restore from a previous backup |
-| ⚪ **Backups** | Open backup folder in Explorer |
-| 🟠 **Check** | Check if Discord has updated |
-| ⚪ **Save Script** | Save locally for startup shortcuts |
+| Button | Color | Description |
+|--------|:-----:|-------------|
+| **Start Fix** | ![Blue](https://img.shields.io/badge/_-5865F2?style=flat-square) | Apply fix to selected Discord client |
+| **Fix All** | ![Blue](https://img.shields.io/badge/_-5865F2?style=flat-square) | Scan and fix all installed clients at once |
+| **Rollback** | ![Gray](https://img.shields.io/badge/_-464950?style=flat-square) | Restore voice module from a previous backup |
+| **Backups** | ![Gray](https://img.shields.io/badge/_-464950?style=flat-square) | Open the backup folder in Explorer |
+| **Check** | ![Orange](https://img.shields.io/badge/_-faa81a?style=flat-square) | Check if Discord has updated since last fix |
+| **Save Script** | ![Gray](https://img.shields.io/badge/_-464950?style=flat-square) | Save script locally (required for startup shortcuts) |
 
 ### Options
 
 | Option | Description |
 |--------|-------------|
-| Check for script updates | Checks GitHub for newer versions |
-| Auto-apply updates | Downloads and applies updates automatically |
-| Create startup shortcut | Adds to Windows Startup folder |
-| Run silently on startup | Auto-fixes all clients on boot |
-| Auto-start Discord | Launches Discord after fix |
+| Check for script updates | Checks GitHub for newer versions before applying fix |
+| Auto-apply updates | Automatically downloads and applies script updates *(hidden until check enabled)* |
+| Create startup shortcut | Creates a shortcut in Windows Startup folder |
+| Run silently on startup | Skips GUI and auto-fixes all clients on boot *(hidden until shortcut enabled)* |
+| Auto-start Discord | Launches Discord after the fix is applied |
 
 </details>
 
