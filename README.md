@@ -156,7 +156,7 @@ Download [Stereo Installer.bat](https://github.com/ProdHallow/Discord-Stereo-Ins
 
 ## 👥 Credits
 
-Made by **Oracle** · **Shaun** · **Terrain** · **Hallow** · **Ascend** · **Sentry**
+Made by **Oracle** · **Shaun** · **Terrain** · **Hallow** · **Ascend** · **Sentry** · **Sikimzo**
 
 ---
 
