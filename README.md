@@ -20,6 +20,12 @@
 
 ---
 
+## 🙌 Special Thanks
+
+> **Huge shoutout to SIKIMZO** for the latest voice module fix that patched all the bugs! No more ffmpeg.dll replacement needed — everything just works now.
+
+---
+
 ## 🚀 Quick Install
 
 **Option 1: One-Line Command** *(Recommended)*
