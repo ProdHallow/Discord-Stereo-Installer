@@ -22,7 +22,7 @@
 
 ## 🙌 Special Thanks
 
-> **Huge shoutout to SIKIMZO** for the latest voice module fix that patched all the bugs! No more ffmpeg.dll replacement needed — everything just works now.
+> **Huge shoutout to Sikimzo** for the latest voice module fix that patched all the bugs! No more ffmpeg.dll replacement needed — everything just works now.
 
 ---
 
