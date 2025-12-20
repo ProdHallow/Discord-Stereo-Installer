@@ -1,6 +1,6 @@
 # 🎧 Stereo Installer
 
-A one-click install tool for Discord Stereo Modules. Automatically downloads and applies the latest voice module patches to restore lossless stereo audio functionality.
+A one-click install tool for Discord Stereo Modules. Automatically downloads and applies the latest voice module patches to restore lossless, **99.9% filterless** stereo audio functionality.
 
 ![Version](https://img.shields.io/badge/Version-3.3-5865F2?style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?style=flat-square)
@@ -36,20 +36,6 @@ powershell -ExecutionPolicy Bypass -c "irm https://raw.githubusercontent.com/Pro
 # Show help
 .\DiscordVoiceFixer.ps1 -Help
 ```
-
-## 📊 Audio Analysis: 99.9% Filterless
-The latest update patches the audio engine to remove virtually all artificial filtering.
-
-### 🔴 Before (Standard Discord)
-Heavy roll-off on low frequencies, aggressive filtering, and noise artifacts.
-
-![Before - Standard Discord](images/before.png)
-
-### 🟢 After (Stereo Installer)
-99.9% Filterless. A completely flat, linear response preserving the original audio source perfectly.
-
-![After - Stereo Installer](images/after.png)
-
 ## 💬 Supported Clients
 | Client | Type |
 |--------|------|
@@ -66,7 +52,7 @@ Heavy roll-off on low frequencies, aggressive filtering, and noise artifacts.
 ## ✨ Features
 | Feature | Description |
 |---------|-------------|
-| 💎 Filterless Audio | Removes internal filters for true lossless quality |
+| 💎 Filterless Audio | NEW! Removes internal filters for true lossless quality |
 | 📂 Any Drive Support | Finds Discord on C:, D:, E:, etc. automatically via Process detection |
 | 🛡️ No Admin Needed | Runs safely in user space (AppData/Temp) |
 | 🚀 High Speed | Optimized download logic for instant file fetching |
