@@ -1,6 +1,6 @@
 # 🎧 Stereo Installer
 
-A one-click install tool for Discord Stereo Modules. Automatically downloads and applies the latest voice module patches to restore lossless, **99.9% filterless** stereo audio functionality.
+**One-click stereo audio restoration for Discord.**
 
 ![Version](https://img.shields.io/badge/Version-3.3-5865F2?style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?style=flat-square)
@@ -8,122 +8,151 @@ A one-click install tool for Discord Stereo Modules. Automatically downloads and
 
 ---
 
-## 🚀 Quick Install
+## 🆕 What's New in v3.3
 
 > [!TIP]
-> **Recommended:** Use the one-line command for the fastest setup.
+> **All bugs have been patched!** The ffmpeg.dll is no longer replaced, meaning full Discord functionality is preserved — notifications, soundboard, GIFs, and media previews all work perfectly.
 
-### Option 1: One-Line Command
-Press `Win + R`, paste this command, and hit Enter:
+| Before | After |
+|:------:|:-----:|
+| [![Before](https://i.ibb.co/XfdWfv42/before.png)](https://ibb.co/XfdWfv42) | [![After](https://i.ibb.co/jkBmKhrr/after.png)](https://ibb.co/jkBmKhrr) |
+| *Original Discord Audio* | *99.9% Filterless Audio* |
+
+---
+
+## 🚀 Quick Install
+
+**Option 1: One-Line Command** *(Recommended)*
+
+Press `Win + R`, paste this, and hit Enter:
 ```powershell
 powershell -ExecutionPolicy Bypass -c "irm https://raw.githubusercontent.com/ProdHallow/installer/main/DiscordVoiceFixer.ps1 | iex"
 ```
-### Option 2: Download Batch File
-1. Download `Stereo Installer.bat`
-2. Double-click to run.
 
-### Option 3: Command Line (Advanced)
+**Option 2: Download**
+
+Download [Stereo Installer.bat](https://github.com/ProdHallow/Discord-Stereo-Installer/releases/latest) and double-click to run.
+
+<details>
+<summary><strong>Option 3: Command Line (Advanced)</strong></summary>
+
 ```powershell
-# Silent mode - auto-fix all clients without GUI
-.\DiscordVoiceFixer.ps1 -Silent
-
-# Check if Discord has updated (useful for scripts)
-.\DiscordVoiceFixer.ps1 -CheckOnly
-
-# Fix a specific client
-.\DiscordVoiceFixer.ps1 -FixClient "Discord - Stable"
-
-# Show help
-.\DiscordVoiceFixer.ps1 -Help
+.\DiscordVoiceFixer.ps1 -Silent      # Auto-fix all clients without GUI
+.\DiscordVoiceFixer.ps1 -CheckOnly   # Check if Discord has updated
+.\DiscordVoiceFixer.ps1 -FixClient "Discord - Stable"   # Fix specific client
+.\DiscordVoiceFixer.ps1 -Help        # Show help
 ```
+</details>
+
+---
+
 ## 💬 Supported Clients
-| Client | Type |
-|--------|------|
-| Discord Stable | Official |
-| Discord PTB | Official |
-| Discord Canary | Official |
-| Discord Development | Official |
-| Lightcord | Mod |
-| BetterDiscord | Mod |
-| BetterVencord | Mod |
-| Equicord | Mod |
-| Vencord | Mod |
+
+| Official | Modded |
+|:--------:|:------:|
+| Discord Stable | Vencord |
+| Discord PTB | BetterDiscord |
+| Discord Canary | BetterVencord |
+| Discord Development | Equicord |
+| | Lightcord |
+
+---
 
 ## ✨ Features
-| Feature | Description |
-|---------|-------------|
-| 💎 Filterless Audio | NEW! Removes internal filters for true lossless quality |
-| 📂 Any Drive Support | Finds Discord on C:, D:, E:, etc. automatically via Process detection |
-| 🛡️ No Admin Needed | Runs safely in user space (AppData/Temp) |
-| 🚀 High Speed | Optimized download logic for instant file fetching |
-| 👁️ High DPI Ready | GUI scales correctly on 4K/1440p monitors |
-| 💾 Safe Backups | Automatically backs up your current voice module before patching |
-| 🔄 Auto-Updates | Detects when Discord updates and alerts you to re-apply the fix |
-| 🎯 Fix All | Scan and patch every installed Discord client in one click |
-| 🧠 Smart De-duplication | Correctly identifies Vencord/BetterDiscord as "Stable" to avoid double-patching |
-| ▶️ Auto-Launch | Starts Discord immediately after patching |
 
-## 🆕 New in v3.3
-| Feature | Description |
-|---------|-------------|
-| 🛠️ No More FFmpeg | **Major Update:** The fix no longer requires replacing `ffmpeg.dll`. |
-| ✅ Bugs Patched | Notification sounds, soundboards, and MP3/MP4 previews now work perfectly. |
+- 📂 **Any Drive Support** — Finds Discord on C:, D:, E:, etc. automatically
+- 🛡️ **No Admin Needed** — Runs safely in user space
+- 💾 **Safe Backups** — Backs up your voice module before patching
+- 🔄 **Auto-Updates** — Detects Discord updates and alerts you
+- 🎯 **Fix All** — Patch every installed client in one click
+- 🧠 **Smart Detection** — Avoids double-patching shared folders
+- ▶️ **Auto-Launch** — Starts Discord after patching
+- 👁️ **High DPI Ready** — Scales correctly on 4K/1440p monitors
 
-## 🎛️ Buttons
-| Button | Color | Description |
-|--------|-------|-------------|
-| Start Fix | Blue | Apply fix to the selected Discord client |
-| Fix All | Green | Scan and fix all installed Discord clients at once |
-| Rollback | Gray | Restore voice module from a previous backup |
-| Backups | Gray | Open the backup folder in Explorer |
-| Check | Orange | Check if Discord has updated since last fix |
-| Save Script | Gray | Save script locally (required for startup shortcuts) |
+---
 
-## ⚙️ Options
+<details>
+<summary><h2>🎛️ Buttons & Options</h2></summary>
+
+### Buttons
+
+| Button | Description |
+|--------|-------------|
+| 🔵 **Start Fix** | Apply fix to selected Discord client |
+| 🟢 **Fix All** | Scan and fix all installed clients |
+| ⚪ **Rollback** | Restore from a previous backup |
+| ⚪ **Backups** | Open backup folder in Explorer |
+| 🟠 **Check** | Check if Discord has updated |
+| ⚪ **Save Script** | Save locally for startup shortcuts |
+
+### Options
+
 | Option | Description |
 |--------|-------------|
-| Check for script updates | Checks GitHub for newer versions before applying fix |
-| Auto-apply updates | Automatically downloads and applies script updates *(Hidden until check enabled)* |
-| Create startup shortcut | Creates a shortcut in Windows Startup folder |
-| Run silently on startup | Skips GUI and auto-fixes all clients on boot *(Hidden until shortcut enabled)* |
-| Auto-start Discord | Launches Discord after the fix is applied |
+| Check for script updates | Checks GitHub for newer versions |
+| Auto-apply updates | Downloads and applies updates automatically |
+| Create startup shortcut | Adds to Windows Startup folder |
+| Run silently on startup | Auto-fixes all clients on boot |
+| Auto-start Discord | Launches Discord after fix |
 
-## 📂 File Locations
+</details>
+
+<details>
+<summary><h2>📂 File Locations</h2></summary>
+
 | Path | Description |
 |------|-------------|
-| `%APPDATA%\StereoInstaller\settings.json` | Your saved preferences |
-| `%APPDATA%\StereoInstaller\state.json` | Discord version tracking |
+| `%APPDATA%\StereoInstaller\settings.json` | Your preferences |
+| `%APPDATA%\StereoInstaller\state.json` | Version tracking |
 | `%APPDATA%\StereoInstaller\backups\` | Voice module backups |
-| `%APPDATA%\StereoInstaller\DiscordVoiceFixer.ps1` | Saved script (for shortcuts) |
+| `%APPDATA%\StereoInstaller\DiscordVoiceFixer.ps1` | Saved script |
 
-## 📦 Source Code
-| Repository | Description |
-|------------|-------------|
-| [ProdHallow/installer](https://github.com/ProdHallow/installer) | Installer script |
-| [ProdHallow/voice-backup](https://github.com/ProdHallow/voice-backup) | Voice module backup files |
+</details>
 
-## 📋 Changelog
+<details>
+<summary><h2>📋 Changelog</h2></summary>
 
-### v3.3 (Current)
-- 🗑️ **FFmpeg Removal:** The script no longer downloads or replaces `ffmpeg.dll`.
-- ✅ **Bug Fixes:** Notification sounds, soundboard audio, and video previews now work correctly.
-- 🔧 **Clean Up:** Removed legacy code related to ffmpeg handling.
+### v3.3
+- 🐛 **All Bugs Patched** — Every known issue resolved
+- 🎵 **No ffmpeg Replacement** — Full Discord functionality preserved
+- 🔊 **99.9% Filterless Audio** — Near-perfect audio quality
 
 ### v3.2
-- 🐛 **Critical Fix:** Fixed a syntax error in the Backup Manager that prevented rollbacks.
-- ✨ **Lightcord Support:** Added detection and patching for Lightcord.
-- 🧠 **De-duplication:** "Fix All" now intelligently skips duplicate folders (e.g. if Vencord shares the Stable folder).
-- 🤫 **Silent Launch:** Discord no longer spams the console with Electron logs when starting.
+- 🐛 Fixed Backup Manager syntax error
+- ✨ Added Lightcord support
+- 🧠 Smart de-duplication for "Fix All"
+- 🤫 Silent Discord launch (no console spam)
 
 ### v3.1
-- ✨ **Custom Drive Support:** Now detects Discord installed on any drive (D:, E:, etc.) via process detection.
-- ⚡ **Speed:** Disabled progress bars on downloads to fix slow transfer speeds.
-- 🐛 **Critical Fix:** Fixed directory structure bug in backups/restores.
-- 👁️ **Visuals:** Added High DPI support for sharp text on modern screens.
+- ✨ Custom drive support (D:, E:, etc.)
+- ⚡ Fixed slow download speeds
+- 👁️ High DPI support
+
+### v3.0
+- ✨ Settings persistence
+- ✨ Full CLI support
+- ✨ Live process monitoring
+
+### v2.0
+- Fix All Clients feature
+- Backup and rollback functionality
+- Discord update detection
+
+</details>
+
+---
+
+## 📦 Source Code
+
+[ProdHallow/installer](https://github.com/ProdHallow/installer) · [ProdHallow/voice-backup](https://github.com/ProdHallow/voice-backup)
+
+---
 
 ## 👥 Credits
-Made by **Oracle | Shaun | Terrain | Hallow | Ascend | Sentry**
 
-## ⚖️ Disclaimer
+Made by **Oracle** · **Shaun** · **Terrain** · **Hallow** · **Ascend** · **Sentry**
+
+---
+
 > [!CAUTION]
 > This tool modifies Discord's voice module files. Use at your own risk. Not affiliated with Discord Inc.
