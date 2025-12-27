@@ -20,6 +20,15 @@
 
 ---
 
+## 🐞 Known Bugs
+
+| Issue | Description |
+|-------|-------------|
+| **First Join Crash** | Discord may crash when joining a voice call for the first time after patching |
+| **Screenshare Crash** | Random crashes can occur when joining a call where someone is already screensharing |
+
+---
+
 ## 🙌 Special Thanks
 
 > **Huge shoutout to Sikimzo, Cypher , and Oracle** for the latest voice module fix that patched all the bugs! No more ffmpeg.dll replacement needed — everything just works now.
