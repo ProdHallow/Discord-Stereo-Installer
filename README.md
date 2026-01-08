@@ -81,7 +81,7 @@ Download [Stereo Installer.bat](https://github.com/ProdHallow/Discord-Stereo-Ins
 <summary><h2>🎛️ Buttons & Options</h2></summary>
 
 <p align="center">
-  <a href="https://ibb.co/NgSvzK6G">
+  <a href="https://ibb.co/zHH6qnwd">
     <img src="https://i.ibb.co/zHH6qnwd/GUI.png" alt="Stereo Installer GUI">
   </a>
 </p>
@@ -91,10 +91,11 @@ Download [Stereo Installer.bat](https://github.com/ProdHallow/Discord-Stereo-Ins
 | Button | Color | Description |
 |--------|:-----:|-------------|
 | **Start Fix** | ![Blue](https://img.shields.io/badge/_-5865F2?style=flat-square) | Apply fix to selected Discord client |
-| **Fix All** | ![Blue](https://img.shields.io/badge/_-5865F2?style=flat-square) | Scan and fix all installed clients at once |
+| **Fix All** | ![Green](https://img.shields.io/badge/_-579E57?style=flat-square) | Scan and fix all installed clients at once |
 | **Rollback** | ![Gray](https://img.shields.io/badge/_-464950?style=flat-square) | Restore voice module from a previous backup |
 | **Backups** | ![Gray](https://img.shields.io/badge/_-464950?style=flat-square) | Open the backup folder in Explorer |
 | **Check** | ![Orange](https://img.shields.io/badge/_-faa81a?style=flat-square) | Check if Discord has updated since last fix |
+| **Apply EQ APO Fix Only** | ![Orange](https://img.shields.io/badge/_-faa81a?style=flat-square) | Apply only the EQ APO settings fix without patching voice module |
 | **Save Script** | ![Gray](https://img.shields.io/badge/_-464950?style=flat-square) | Save script locally (required for startup shortcuts) |
 
 ### Options
@@ -106,7 +107,7 @@ Download [Stereo Installer.bat](https://github.com/ProdHallow/Discord-Stereo-Ins
 | Create startup shortcut | Creates a shortcut in Windows Startup folder |
 | Run silently on startup | Skips GUI and auto-fixes all clients on boot *(hidden until shortcut enabled)* |
 | Auto-start Discord | Launches Discord after the fix is applied |
-| **FIX EQ APO NOT WORKING** | Replaces Discord settings.json with EQ APO-compatible version *(backs up original first)* |
+| **Fix EQ APO not working** | Replaces Discord settings.json with EQ APO-compatible version *(backs up original first)* |
 
 </details>
 
@@ -131,6 +132,7 @@ Download [Stereo Installer.bat](https://github.com/ProdHallow/Discord-Stereo-Ins
 - 💾 **Auto Backup** — Automatically backs up settings.json before replacement
 - ⚠️ **User Confirmation** — Asks for confirmation before applying EQ APO fix
 - 📝 **Detailed Logging** — Shows all EQ APO fix operations in status box
+- 🔘 **Standalone Button** — Added "Apply EQ APO Fix Only" button for quick settings fix
 
 ### v3.3
 - 🐛 **All Bugs Patched** — Every known issue resolved
