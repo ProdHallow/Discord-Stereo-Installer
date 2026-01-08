@@ -2,16 +2,16 @@
 
 **One-click stereo audio restoration for Discord.**
 
-![Version](https://img.shields.io/badge/Version-3.3-5865F2?style=flat-square)
+![Version](https://img.shields.io/badge/Version-3.4-5865F2?style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?style=flat-square)
 ![PowerShell](https://img.shields.io/badge/PowerShell-5.1+-5391FE?style=flat-square)
 
 ---
 
-## 🆕 What's New in v3.3
+## 🆕 What's New in v3.4
 
 > [!TIP]
-> **All bugs have been patched!** The ffmpeg.dll is no longer replaced, meaning full Discord functionality is preserved — notifications, soundboard, GIFs, and media previews all work perfectly.
+> **NEW: EQ APO Fix!** Added one-click fix for EQ APO compatibility issues. The installer can now automatically replace your Discord settings.json with EQ APO-compatible settings, with automatic backup of your current configuration.
 
 | Before | After |
 |:------:|:-----:|
@@ -22,7 +22,7 @@
 
 ## 🙌 Special Thanks
 
-> **Huge shoutout to Sikimzo, Cypher , and Oracle** for the latest voice module fix that patched all the bugs! No more ffmpeg.dll replacement needed — everything just works now.
+> **Huge shoutout to Sikimzo, Cypher, and Oracle** for the latest voice module fix that patched all the bugs! No more ffmpeg.dll replacement needed — everything just works now.
 
 ---
 
@@ -41,7 +41,6 @@ Download [Stereo Installer.bat](https://github.com/ProdHallow/Discord-Stereo-Ins
 
 <details>
 <summary><strong>Option 3: Command Line (Advanced)</strong></summary>
-
 ```powershell
 .\DiscordVoiceFixer.ps1 -Silent      # Auto-fix all clients without GUI
 .\DiscordVoiceFixer.ps1 -CheckOnly   # Check if Discord has updated
@@ -74,6 +73,7 @@ Download [Stereo Installer.bat](https://github.com/ProdHallow/Discord-Stereo-Ins
 - 🧠 **Smart Detection** — Avoids double-patching shared folders
 - ▶️ **Auto-Launch** — Starts Discord after patching
 - 👁️ **High DPI Ready** — Scales correctly on 4K/1440p monitors
+- 🎛️ **EQ APO Fix** — One-click solution for EQ APO compatibility issues
 
 ---
 
@@ -106,6 +106,7 @@ Download [Stereo Installer.bat](https://github.com/ProdHallow/Discord-Stereo-Ins
 | Create startup shortcut | Creates a shortcut in Windows Startup folder |
 | Run silently on startup | Skips GUI and auto-fixes all clients on boot *(hidden until shortcut enabled)* |
 | Auto-start Discord | Launches Discord after the fix is applied |
+| **FIX EQ APO NOT WORKING** | Replaces Discord settings.json with EQ APO-compatible version *(backs up original first)* |
 
 </details>
 
@@ -118,11 +119,18 @@ Download [Stereo Installer.bat](https://github.com/ProdHallow/Discord-Stereo-Ins
 | `%APPDATA%\StereoInstaller\state.json` | Version tracking |
 | `%APPDATA%\StereoInstaller\backups\` | Voice module backups |
 | `%APPDATA%\StereoInstaller\DiscordVoiceFixer.ps1` | Saved script |
+| `%APPDATA%\discord\settings.json` | Discord settings (backed up when using EQ APO fix) |
 
 </details>
 
 <details>
 <summary><h2>📋 Changelog</h2></summary>
+
+### v3.4
+- 🎛️ **EQ APO Fix** — Added one-click fix for EQ APO compatibility
+- 💾 **Auto Backup** — Automatically backs up settings.json before replacement
+- ⚠️ **User Confirmation** — Asks for confirmation before applying EQ APO fix
+- 📝 **Detailed Logging** — Shows all EQ APO fix operations in status box
 
 ### v3.3
 - 🐛 **All Bugs Patched** — Every known issue resolved
