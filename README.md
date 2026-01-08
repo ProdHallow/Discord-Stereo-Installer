@@ -82,7 +82,7 @@ Download [Stereo Installer.bat](https://github.com/ProdHallow/Discord-Stereo-Ins
 
 <p align="center">
   <a href="https://ibb.co/NgSvzK6G">
-    <img src="https://ibb.co/bRRbcWnt" alt="Stereo Installer GUI">
+    <img src="https://i.ibb.co/zHH6qnwd/GUI.png" alt="Stereo Installer GUI">
   </a>
 </p>
 
