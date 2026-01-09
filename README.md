@@ -2,16 +2,16 @@
 
 **One-click stereo audio restoration for Discord.**
 
-![Version](https://img.shields.io/badge/Version-3.4-5865F2?style=flat-square)
+![Version](https://img.shields.io/badge/Version-3.5-5865F2?style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?style=flat-square)
 ![PowerShell](https://img.shields.io/badge/PowerShell-5.1+-5391FE?style=flat-square)
 
 ---
 
-## 🆕 What's New in v3.4
+## 🆕 What's New in v3.5
 
 > [!TIP]
-> **NEW: EQ APO Fix!** Added one-click fix for EQ APO compatibility issues. The installer can now automatically replace your Discord settings.json with EQ APO-compatible settings, with automatic backup of your current configuration.
+> **NEW: Original Module Preservation!** The installer now automatically saves your original Discord voice modules on first use. These backups are **never deleted**, so you can always revert to mono audio if you decide stereo isn't for you. Look for `[ORIGINAL]` backups in the rollback menu!
 
 | Before | After |
 |:------:|:-----:|
@@ -68,6 +68,7 @@ Download [Stereo Installer.bat](https://github.com/ProdHallow/Discord-Stereo-Ins
 - 📂 **Any Drive Support** — Finds Discord on C:, D:, E:, etc. automatically
 - 🛡️ **No Admin Needed** — Runs safely in user space
 - 💾 **Safe Backups** — Backs up your voice module before patching
+- 🔒 **Original Preservation** — First-time backups are kept forever for easy mono revert
 - 🔄 **Auto-Updates** — Detects Discord updates and alerts you
 - 🎯 **Fix All** — Patch every installed client in one click
 - 🧠 **Smart Detection** — Avoids double-patching shared folders
@@ -118,7 +119,9 @@ Download [Stereo Installer.bat](https://github.com/ProdHallow/Discord-Stereo-Ins
 |------|-------------|
 | `%APPDATA%\StereoInstaller\settings.json` | Your preferences |
 | `%APPDATA%\StereoInstaller\state.json` | Version tracking |
-| `%APPDATA%\StereoInstaller\backups\` | Voice module backups |
+| `%APPDATA%\StereoInstaller\backups\` | Voice module backups (rotated, 1 per client) |
+| `%APPDATA%\StereoInstaller\original_discord_modules\` | **Permanent** original backups (never deleted) |
+| `%APPDATA%\StereoInstaller\settings_backups\` | Discord settings.json backups |
 | `%APPDATA%\StereoInstaller\DiscordVoiceFixer.ps1` | Saved script |
 | `%APPDATA%\discord\settings.json` | Discord settings (backed up when using EQ APO fix) |
 
@@ -126,6 +129,14 @@ Download [Stereo Installer.bat](https://github.com/ProdHallow/Discord-Stereo-Ins
 
 <details>
 <summary><h2>📋 Changelog</h2></summary>
+
+### v3.5
+- 🔒 **Original Module Preservation** — First backup for each client is now permanent
+- 📁 **New Backup Structure** — Original backups stored separately in `original_discord_modules` folder
+- 🔄 **Easy Mono Revert** — Restore original Discord modules anytime to go back to mono audio
+- ⚠️ **Restore Warnings** — Special confirmation when restoring original (mono) backups
+- 🎨 **Enhanced Rollback UI** — Original backups highlighted with `[ORIGINAL]` prefix
+- 📝 **Check Button Update** — Now shows original backup status for selected client
 
 ### v3.4
 - 🎛️ **EQ APO Fix** — Added one-click fix for EQ APO compatibility
