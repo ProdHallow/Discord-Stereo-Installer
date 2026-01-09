@@ -133,6 +133,7 @@ Download [Stereo Installer.bat](https://github.com/ProdHallow/Discord-Stereo-Ins
 - ⚠️ **User Confirmation** — Asks for confirmation before applying EQ APO fix
 - 📝 **Detailed Logging** — Shows all EQ APO fix operations in status box
 - 🔘 **Standalone Button** — Added "Apply EQ APO Fix Only" button for quick settings fix
+- 🐛 **Bug Fixes** — Fixed invalid backup error when restoring discord voice modules for the first time
 
 ### v3.3
 - 🐛 **All Bugs Patched** — Every known issue resolved
