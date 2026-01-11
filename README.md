@@ -2,16 +2,16 @@
 
 **One-click stereo audio restoration for Discord.**
 
-![Version](https://img.shields.io/badge/Version-3.5-5865F2?style=flat-square)
+![Version](https://img.shields.io/badge/Version-3.6-5865F2?style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?style=flat-square)
 ![PowerShell](https://img.shields.io/badge/PowerShell-5.1+-5391FE?style=flat-square)
 
 ---
 
-## 🆕 What's New in v3.5
+## 🆕 What's New in v3.6
 
 > [!TIP]
-> **NEW: Original Module Preservation!** The installer now automatically saves your original Discord voice modules on first use. These backups are **never deleted**, so you can always revert to mono audio if you decide stereo isn't for you. Look for `[ORIGINAL]` backups in the rollback menu!
+> **Improved Error Handling!** Silent mode now provides clear, actionable instructions when Discord's voice module isn't downloaded yet. Plus, the script better handles edge cases when Discord processes aren't running — no more false warnings!
 
 | Before | After |
 |:------:|:-----:|
@@ -75,6 +75,7 @@ Download [Stereo Installer.bat](https://github.com/ProdHallow/Discord-Stereo-Ins
 - ▶️ **Auto-Launch** — Starts Discord after patching
 - 👁️ **High DPI Ready** — Scales correctly on 4K/1440p monitors
 - 🎛️ **EQ APO Fix** — One-click solution for EQ APO compatibility issues
+- 🔧 **Auto-Repair** — Automatically reinstalls corrupted Discord installations
 
 ---
 
@@ -129,6 +130,13 @@ Download [Stereo Installer.bat](https://github.com/ProdHallow/Discord-Stereo-Ins
 
 <details>
 <summary><h2>📋 Changelog</h2></summary>
+
+### v3.6
+- 🔧 **Improved Silent Mode** — Clear, actionable error messages when voice module isn't downloaded
+- 📝 **Better Diagnostics** — Distinguishes between "no modules folder" and "no voice module" errors
+- ✅ **Fixed Process Detection** — Correctly reports success when no Discord processes are running
+- 🎯 **Smarter Error Handling** — Provides step-by-step instructions for missing voice module issue
+- 🛠️ **Memory Execution Support** — Works reliably when running from memory via bat file or web download
 
 ### v3.5
 - 🔒 **Original Module Preservation** — First backup for each client is now permanent
