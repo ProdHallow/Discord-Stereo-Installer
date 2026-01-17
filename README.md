@@ -2,16 +2,16 @@
 
 **One-click stereo audio restoration for Discord.**
 
-![Version](https://img.shields.io/badge/Version-3.6-5865F2?style=flat-square)
+![Version](https://img.shields.io/badge/Version-3.7-5865F2?style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?style=flat-square)
 ![PowerShell](https://img.shields.io/badge/PowerShell-5.1+-5391FE?style=flat-square)
 
 ---
 
-## 🆕 What's New in v3.6
+## 🆕 What's New in v3.7
 
 > [!TIP]
-> **Improved Error Handling!** Silent mode now provides clear, actionable instructions when Discord's voice module isn't downloaded yet. Plus, the script better handles edge cases when Discord processes aren't running — no more false warnings!
+> **Bulletproof Backups!** Completely overhauled the backup/rollback system. Backups are now validated for actual content, corrupted backups are detected and reported, and rollback errors finally explain *why* they failed instead of generic messages.
 
 | Before | After |
 |:------:|:-----:|
@@ -130,6 +130,15 @@ Download [Stereo Installer.bat](https://github.com/ProdHallow/Discord-Stereo-Ins
 
 <details>
 <summary><h2>📋 Changelog</h2></summary>
+
+### v3.7
+- 🛡️ **Backup Validation** — Backups are now verified to contain actual files before being listed
+- 🌍 **Locale Fix** — Fixed date parsing bug that caused backups to silently fail on non-US systems
+- 📝 **Detailed Rollback Errors** — Rollback now explains exactly why it failed (missing files, corrupted metadata, empty backups, etc.)
+- 🔍 **Corrupted Backup Detection** — Invalid backups are identified and reported instead of silently skipped
+- ✅ **Restore Verification** — Confirms files were actually copied after restore completes
+- 📊 **Backup Metadata** — Backups now track file count and total size for diagnostics
+- 🧹 **Code Cleanup** — 43% smaller codebase with same functionality
 
 ### v3.6
 - 🔧 **Improved Silent Mode** — Clear, actionable error messages when voice module isn't downloaded
