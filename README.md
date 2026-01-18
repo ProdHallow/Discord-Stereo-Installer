@@ -11,7 +11,7 @@
 ## 🆕 What's New in v3.7
 
 > [!TIP]
-> **Bulletproof Backups!** Completely overhauled the backup/rollback system. Backups are now validated for actual content, corrupted backups are detected and reported, and rollback errors finally explain *why* they failed instead of generic messages.
+> **Bulletproof Backups & Multi-Client EQ APO Fix!** Completely overhauled the backup/rollback system with validation and detailed error reporting. EQ APO fix now applies to ALL installed Discord clients automatically — no more fixing each one separately!
 
 | Before | After |
 |:------:|:-----:|
@@ -74,7 +74,7 @@ Download [Stereo Installer.bat](https://github.com/ProdHallow/Discord-Stereo-Ins
 - 🧠 **Smart Detection** — Avoids double-patching shared folders
 - ▶️ **Auto-Launch** — Starts Discord after patching
 - 👁️ **High DPI Ready** — Scales correctly on 4K/1440p monitors
-- 🎛️ **EQ APO Fix** — One-click solution for EQ APO compatibility issues
+- 🎛️ **EQ APO Fix** — One-click solution for EQ APO compatibility (fixes ALL clients)
 - 🔧 **Auto-Repair** — Automatically reinstalls corrupted Discord installations
 
 ---
@@ -97,7 +97,7 @@ Download [Stereo Installer.bat](https://github.com/ProdHallow/Discord-Stereo-Ins
 | **Rollback** | ![Gray](https://img.shields.io/badge/_-464950?style=flat-square) | Restore voice module from a previous backup |
 | **Backups** | ![Gray](https://img.shields.io/badge/_-464950?style=flat-square) | Open the backup folder in Explorer |
 | **Check** | ![Orange](https://img.shields.io/badge/_-faa81a?style=flat-square) | Check if Discord has updated since last fix |
-| **Apply EQ APO Fix Only** | ![Orange](https://img.shields.io/badge/_-faa81a?style=flat-square) | Apply only the EQ APO settings fix without patching voice module |
+| **Apply EQ APO Fix Only** | ![Orange](https://img.shields.io/badge/_-faa81a?style=flat-square) | Apply EQ APO settings fix to all installed clients |
 | **Save Script** | ![Gray](https://img.shields.io/badge/_-464950?style=flat-square) | Save script locally (required for startup shortcuts) |
 
 ### Options
@@ -109,7 +109,7 @@ Download [Stereo Installer.bat](https://github.com/ProdHallow/Discord-Stereo-Ins
 | Create startup shortcut | Creates a shortcut in Windows Startup folder |
 | Run silently on startup | Skips GUI and auto-fixes all clients on boot *(hidden until shortcut enabled)* |
 | Auto-start Discord | Launches Discord after the fix is applied |
-| **Fix EQ APO not working** | Replaces Discord settings.json with EQ APO-compatible version *(backs up original first)* |
+| **Fix EQ APO not working** | Replaces settings.json for ALL Discord clients with EQ APO-compatible version *(backs up originals first)* |
 
 </details>
 
@@ -122,9 +122,12 @@ Download [Stereo Installer.bat](https://github.com/ProdHallow/Discord-Stereo-Ins
 | `%APPDATA%\StereoInstaller\state.json` | Version tracking |
 | `%APPDATA%\StereoInstaller\backups\` | Voice module backups (rotated, 1 per client) |
 | `%APPDATA%\StereoInstaller\original_discord_modules\` | **Permanent** original backups (never deleted) |
-| `%APPDATA%\StereoInstaller\settings_backups\` | Discord settings.json backups |
+| `%APPDATA%\StereoInstaller\settings_backups\` | Discord settings.json backups (per client) |
 | `%APPDATA%\StereoInstaller\DiscordVoiceFixer.ps1` | Saved script |
-| `%APPDATA%\discord\settings.json` | Discord settings (backed up when using EQ APO fix) |
+| `%APPDATA%\discord\settings.json` | Discord Stable settings |
+| `%APPDATA%\discordcanary\settings.json` | Discord Canary settings |
+| `%APPDATA%\discordptb\settings.json` | Discord PTB settings |
+| `%APPDATA%\discorddevelopment\settings.json` | Discord Development settings |
 
 </details>
 
@@ -132,13 +135,15 @@ Download [Stereo Installer.bat](https://github.com/ProdHallow/Discord-Stereo-Ins
 <summary><h2>📋 Changelog</h2></summary>
 
 ### v3.7
+- 🎛️ **Multi-Client EQ APO Fix** — EQ APO fix now applies to ALL installed Discord clients (Stable, Canary, PTB, Development)
 - 🛡️ **Backup Validation** — Backups are now verified to contain actual files before being listed
 - 🌍 **Locale Fix** — Fixed date parsing bug that caused backups to silently fail on non-US systems
 - 📝 **Detailed Rollback Errors** — Rollback now explains exactly why it failed (missing files, corrupted metadata, empty backups, etc.)
 - 🔍 **Corrupted Backup Detection** — Invalid backups are identified and reported instead of silently skipped
 - ✅ **Restore Verification** — Confirms files were actually copied after restore completes
 - 📊 **Backup Metadata** — Backups now track file count and total size for diagnostics
-- 🧹 **Code Cleanup** — 43% smaller codebase with same functionality
+- 💾 **Per-Client Settings Backups** — Settings.json backups now include client name in filename
+- 🧹 **Code Cleanup** — Streamlined codebase with minimal comments
 
 ### v3.6
 - 🔧 **Improved Silent Mode** — Clear, actionable error messages when voice module isn't downloaded
