@@ -2,16 +2,16 @@
 
 **One-click stereo audio restoration for Discord.**
 
-![Version](https://img.shields.io/badge/Version-3.7-5865F2?style=flat-square)
+![Version](https://img.shields.io/badge/Version-4.0-5865F2?style=flat-square)
 ![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?style=flat-square)
 ![PowerShell](https://img.shields.io/badge/PowerShell-5.1+-5391FE?style=flat-square)
 
 ---
 
-## 🆕 What's New in v3.7
+## 🆕 What's New in v4.0
 
 > [!TIP]
-> **Bulletproof Backups & Multi-Client EQ APO Fix!** Completely overhauled the backup/rollback system with validation and detailed error reporting. EQ APO fix now applies to ALL installed Discord clients automatically — no more fixing each one separately!
+> **Smart Update Detection & Fix Verification!** The installer now automatically detects Discord updates on startup and prompts you to re-apply the fix. Plus, a new Verify Fix button lets you confirm the stereo fix is active using MD5 hash comparison!
 
 | Before | After |
 |:------:|:-----:|
@@ -70,6 +70,9 @@ Download [Stereo Installer.bat](https://github.com/ProdHallow/Discord-Stereo-Ins
 - 💾 **Safe Backups** — Backs up your voice module before patching
 - 🔒 **Original Preservation** — First-time backups are kept forever for easy mono revert
 - 🔄 **Auto-Updates** — Detects Discord updates and alerts you
+- 🔍 **Auto-Detect Updates** — Scans all clients for version changes on startup
+- ⚡ **Smart Auto-Fix** — Only re-fixes updated clients when auto-fix is enabled
+- ✅ **Verify Fix** — Confirm stereo fix status with MD5 hash comparison
 - 🎯 **Fix All** — Patch every installed client in one click
 - 🧠 **Smart Detection** — Avoids double-patching shared folders
 - ▶️ **Auto-Launch** — Starts Discord after patching
@@ -94,6 +97,7 @@ Download [Stereo Installer.bat](https://github.com/ProdHallow/Discord-Stereo-Ins
 |--------|:-----:|-------------|
 | **Start Fix** | ![Blue](https://img.shields.io/badge/_-5865F2?style=flat-square) | Apply fix to selected Discord client |
 | **Fix All** | ![Green](https://img.shields.io/badge/_-579E57?style=flat-square) | Scan and fix all installed clients at once |
+| **Verify Fix** | ![Green](https://img.shields.io/badge/_-579E57?style=flat-square) | Check if stereo fix is active using MD5 hash comparison |
 | **Rollback** | ![Gray](https://img.shields.io/badge/_-464950?style=flat-square) | Restore voice module from a previous backup |
 | **Backups** | ![Gray](https://img.shields.io/badge/_-464950?style=flat-square) | Open the backup folder in Explorer |
 | **Check** | ![Orange](https://img.shields.io/badge/_-faa81a?style=flat-square) | Check if Discord has updated since last fix |
@@ -108,6 +112,7 @@ Download [Stereo Installer.bat](https://github.com/ProdHallow/Discord-Stereo-Ins
 | Auto-apply updates | Automatically downloads and applies script updates *(hidden until check enabled)* |
 | Create startup shortcut | Creates a shortcut in Windows Startup folder |
 | Run silently on startup | Skips GUI and auto-fixes all clients on boot *(hidden until shortcut enabled)* |
+| Auto-fix when Discord updates | Automatically re-applies fix when Discord updates are detected on startup *(enabled by default)* |
 | Auto-start Discord | Launches Discord after the fix is applied |
 | **Fix EQ APO not working** | Replaces settings.json for ALL Discord clients with EQ APO-compatible version *(backs up originals first)* |
 
@@ -133,6 +138,14 @@ Download [Stereo Installer.bat](https://github.com/ProdHallow/Discord-Stereo-Ins
 
 <details>
 <summary><h2>📋 Changelog</h2></summary>
+
+### v4.0
+- ✅ **Verify Fix Button** — New button to verify stereo fix status using MD5 hash comparison against original backups
+- 🔍 **Auto-Detect Discord Updates** — Automatically scans all installed clients for version changes on GUI startup
+- ⚙️ **Auto-Fix on Discord Update** — New option to automatically re-apply fix when Discord updates are detected *(enabled by default)*
+- 💬 **Update Prompts** — Shows detailed update notification with version changes (e.g., `v1.0.9176 -> v1.0.9177`)
+- ⚡ **Smart Silent Mode** — When auto-fix enabled + updates detected, only fixes updated clients; when no updates, skips fix and just starts Discord
+- 📊 **Status Bar Notifications** — Update detection status displayed in the status bar
 
 ### v3.7
 - 🎛️ **Multi-Client EQ APO Fix** — EQ APO fix now applies to ALL installed Discord clients (Stable, Canary, PTB, Development)
