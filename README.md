@@ -42,10 +42,10 @@ Download [Stereo Installer.bat](https://github.com/ProdHallow/Discord-Stereo-Ins
 <details>
 <summary><strong>Option 3: Command Line (Advanced)</strong></summary>
 ``` powershell
-.\DiscordVoiceFixer.ps1 -Silent      # Auto-fix all clients without GUI
-.\DiscordVoiceFixer.ps1 -CheckOnly   # Check if Discord has updated
-.\DiscordVoiceFixer.ps1 -FixClient "Discord - Stable"   # Fix specific client
-.\DiscordVoiceFixer.ps1 -Help        # Show help
+DiscordVoiceFixer.ps1 -Silent      # Auto-fix all clients without GUI
+DiscordVoiceFixer.ps1 -CheckOnly   # Check if Discord has updated
+DiscordVoiceFixer.ps1 -FixClient "Discord - Stable"   # Fix specific client
+DiscordVoiceFixer.ps1 -Help        # Show help
 ```
 </details>
 
