@@ -223,6 +223,8 @@ DiscordVoiceFixer.ps1 -Help        # Show help
 
 Made by **Oracle** · **Shaun** · **Hallow** · **Ascend** · **Sentry** · **Sikimzo** · **Cypher**
 
+**Bug Fixes & GUI** — Claude (Anthropic)
+
 ---
 
 > [!CAUTION]
