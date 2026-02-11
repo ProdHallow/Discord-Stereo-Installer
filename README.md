@@ -13,6 +13,9 @@
 > [!TIP]
 > **Smart Update Detection & Fix Verification!** The installer now automatically detects Discord updates on startup and prompts you to re-apply the fix. Plus, a new Verify Fix button lets you confirm the stereo fix is active using MD5 hash comparison!
 
+> [!IMPORTANT]
+> **Voice modules updated to Discord's latest build (February 2026).** If you previously applied the fix, re-run the installer to get the updated modules.
+
 | Before | After |
 |:------:|:-----:|
 | [![Before](https://i.ibb.co/j9x89156/before.png)](https://ibb.co/XfdWfv42) | [![After](https://i.ibb.co/WvqZ9n22/after.png)](https://ibb.co/jkBmKhrr) |
@@ -142,6 +145,7 @@ DiscordVoiceFixer.ps1 -Help        # Show help
 <summary><h2>📋 Changelog</h2></summary>
 
 ### v4.0
+- 🔄 **Updated Voice Modules** — Voice modules updated to Discord's latest build (February 2026)
 - ✅ **Verify Fix Button** — New button to verify stereo fix status using MD5 hash comparison against original backups
 - 🔍 **Auto-Detect Discord Updates** — Automatically scans all installed clients for version changes on GUI startup
 - ⚙️ **Auto-Fix on Discord Update** — New option to automatically re-apply fix when Discord updates are detected *(enabled by default)*
@@ -229,4 +233,3 @@ Made by **Oracle** · **Shaun** · **Hallow** · **Ascend** · **Sentry** · **S
 
 > [!CAUTION]
 > This tool modifies Discord's voice module files. Use at your own risk. Not affiliated with Discord Inc.
-```
