@@ -7,12 +7,7 @@
 ![PowerShell](https://img.shields.io/badge/PowerShell-5.1+-5391FE?style=flat-square)
 
 ---
-# ⚠️ Can't be heard? Disable your VPN.
-
-VPNs, aggressive firewalls, and antivirus software interfere with Discord's voice packets. Stereo requires higher bandwidth and is especially affected. **This is not a module issue.**
-
-If you must use a VPN, split-tunnel Discord so it bypasses it.
-
+# ⚠️ ATTENTION!!! I WILL BE MERGING EVERY DISCORD AUDIO RELATED REPO TO (Discord Audio Collective[https://github.com/ProdHallow/Discord-Stereo-Windows-MacOS-Linux])
 ---
 
 ## 🆕 What's New in v4.0
