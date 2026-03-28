@@ -7,7 +7,7 @@
 ![PowerShell](https://img.shields.io/badge/PowerShell-5.1+-5391FE?style=flat-square)
 
 ---
-# ⚠️ ATTENTION!!! I WILL BE MERGING EVERY DISCORD AUDIO RELATED REPO TO (Discord Audio Collective[https://github.com/ProdHallow/Discord-Stereo-Windows-MacOS-Linux])
+# ⚠️ ATTENTION!!! I WILL BE MERGING EVERY DISCORD AUDIO RELATED REPO TO (Discord Audio Collective [https://github.com/ProdHallow/Discord-Stereo-Windows-MacOS-Linux])
 ---
 
 ## 🆕 What's New in v4.0
